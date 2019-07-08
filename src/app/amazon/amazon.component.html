@@ -1,0 +1,14 @@
+<input [(ngModel)]="search_item" type="text"><br>
+<button (click)="search()" >Submit</button>
+ <table >
+<tr *ngIf="this.print==1">
+  <th>Product</th>
+  <th>Best Price</th>
+  <th>Current Price</th>
+</tr>
+<tr>
+  <td>{{search_item}}</td>
+  <td *ngFor="let v of item_price">{{v}}</td>
+  <!--<td *ngFor="let i of item.items_list.values">{{i}}</td>-->
+</tr>
+</table>
